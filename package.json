@@ -1,0 +1,27 @@
+{
+  "name": "stegweb",
+  "version": "1.0.0",
+  "description": "Web Tool for Steganography",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiorodr/StegWeb.git"
+  },
+  "keywords": [
+    "steganography"
+  ],
+  "author": "Arturo Alves, Cláudio Rodrigues",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claudiorodr/StegWeb/issues"
+  },
+  "homepage": "https://github.com/claudiorodr/StegWeb#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "fs": "0.0.1-security"
+  }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Steganography Encrypt</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="css/argon.min.css?v=1.2.0" type="text/css">
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+        <div class="scrollbar-inner">
+            <!-- Brand -->
+            <div class="sidenav-header  d-flex  align-items-center">
+                <a class="navbar-brand" href="../../pages/dashboards/dashboard.html">
+                    <!-- <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="..."> -->
+                </a>
+                <div class=" ml-auto ">
+                    <!-- Sidenav toggler -->
+                    <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin"
+                        data-target="#sidenav-main">
+                        <div class="sidenav-toggler-inner">
+                            <i class="sidenav-toggler-line"></i>
+                            <i class="sidenav-toggler-line"></i>
+                            <i class="sidenav-toggler-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-inner">
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                    <!-- Nav items -->
+                    <ul class="navbar-nav image">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-dashboards">
+                                <i class="ni ni-shop text-primary"></i>
+                                <span class="nav-link-text">Image</span>
+                            </a>
+                            <div class="collapse" id="navbar-dashboards">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="/anotherbruteforce.html" class="nav-link active">
+                                            <span class="sidenav-mini-icon"> L </span>
+                                            <span class="sidenav-normal"> Loading </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/partialdigest.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> U </span>
+                                            <span class="sidenav-normal"> Unloading </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav audio">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-dashboards">
+                                <i class="ni ni-shop text-primary"></i>
+                                <span class="nav-link-text">Audio</span>
+                            </a>
+                            <div class="collapse" id="navbar-dashboards">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="/anotherbruteforce.html" class="nav-link active">
+                                            <span class="sidenav-mini-icon"> L </span>
+                                            <span class="sidenav-normal"> Loading </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/partialdigest.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> U </span>
+                                            <span class="sidenav-normal"> Unloading </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <div class="main-content" id="panel">
+        <!-- Header -->
+        <div class="header bg-primary pb-6">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="row align-items-center py-4">
+                        <div class="col-lg-6 col-7">
+                            <h6 class="h2 text-white d-inline-block mb-0">Steganography Loading</h6>
+                            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                    <!-- <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Form elements</li> -->
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page content -->
+        <div class="container-fluid mt--6">
+            <div class="row">
+                <div class="col">
+                    <div class="card-wrapper">
+                        <!-- Custom form validation -->
+                        <div class="card">
+                            <!-- Card header -->
+                            <div class="card-header">
+                                <h3 class="mb-0">Image Loading</h3>
+                            </div>
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <p class="mb-0">
+                                            Please upload an image and insert a message in the input box to have your
+                                            Steganographic image!
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr />
+                                <form action="/loading" method="POST" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="dropzone dropzone-single mb-3" data-toggle="dropzone"
+                                                    data-dropzone-url="http://">
+                                                    <div class="fallback">
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input"
+                                                                id="projectCoverUploads">
+                                                            <label class="custom-file-label"
+                                                                for="projectCoverUploads">Choose file</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dz-preview dz-preview-single">
+                                                        <div class="dz-preview-cover">
+                                                            <img class="dz-preview-img" src="..." alt="..."
+                                                                data-dz-thumbnail>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="customFileLang"
+                                                    lang="en">
+                                                <label class="custom-file-label" for="customFileLang"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">Steganography!</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/jquery-scrollLock.min.js"></script>
+    <script src="js/bootstrap-tagsinput.min.js"></script>
+    <script src="js/dropzone.min.js"></script>
+    <script src="js/argon.min.js?v=1.2.0"></script>
+</body>
+
+</html>
