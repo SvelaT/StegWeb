@@ -46,4 +46,26 @@ app.post('/loading', function (req, res) { //When posting from this route, from 
 
 })
 
+app.post('/unloading', function (req, res) { //When posting from this route, from the form
+    // console.log(req.files);
+    if (typeof (req.files.file) != 'undefined') {
+        req.files.file.name = "steganoImage.png"
+        var image = req.files.file.name //Uploaded filename
+        var imagePath = './' + image //Move file to local server path
+        req.files.file.mv(imagePath)
+    }
+
+    if (fs.existsSync("./steganoImage.png")) {
+        var process = spawn('python', ["./steganoImageGet.py",
+            "./steganoImage.png",
+            "./steganoText.txt"]);
+
+        process.stdout.on('data', function (data) {
+            res.send(data.toString());
+        })
+
+    }
+
+})
+
 

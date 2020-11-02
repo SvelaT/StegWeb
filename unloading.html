@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Restriction Mapping</title>
+    <title>Steganography Encrypt</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="css/nucleo.css" type="text/css">
     <link rel="stylesheet" href="css/all.min.css" type="text/css">
@@ -37,25 +37,50 @@
                 <!-- Collapse -->
                 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                     <!-- Nav items -->
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav image">
                         <li class="nav-item">
                             <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="navbar-dashboards">
                                 <i class="ni ni-shop text-primary"></i>
-                                <span class="nav-link-text">Algorithms</span>
+                                <span class="nav-link-text">Image</span>
                             </a>
                             <div class="collapse" id="navbar-dashboards">
                                 <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item" aria-selected="true">
-                                        <a href="anotherbruteforce.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> A </span>
-                                            <span class="sidenav-normal"> AnotherBruteForcePDP </span>
+                                    <li class="nav-item">
+                                        <a href="/loading" class="nav-link active">
+                                            <span class="sidenav-mini-icon"> L </span>
+                                            <span class="sidenav-normal"> Loading </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="partialdigest.html" class="nav-link active">
-                                            <span class="sidenav-mini-icon"> P </span>
-                                            <span class="sidenav-normal"> PartialDigest </span>
+                                        <a href="/unloading" class="nav-link">
+                                            <span class="sidenav-mini-icon"> U </span>
+                                            <span class="sidenav-normal"> Unloading </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav audio">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-dashboards">
+                                <i class="ni ni-shop text-primary"></i>
+                                <span class="nav-link-text">Audio</span>
+                            </a>
+                            <div class="collapse" id="navbar-dashboards">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="/anotherbruteforce.html" class="nav-link active">
+                                            <span class="sidenav-mini-icon"> L </span>
+                                            <span class="sidenav-normal"> Loading </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/partialdigest.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> U </span>
+                                            <span class="sidenav-normal"> Unloading </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -74,10 +99,10 @@
                 <div class="header-body">
                     <div class="row align-items-center py-4">
                         <div class="col-lg-6 col-7">
-                            <h6 class="h2 text-white d-inline-block mb-0">Selected Combinatorial Algorithms</h6>
+                            <h6 class="h2 text-white d-inline-block mb-0">Steganography Loading</h6>
                             <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                        <!-- <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                    <!-- <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                                         <li class="breadcrumb-item"><a href="#">Forms</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Form elements</li> -->
                                 </ol>
@@ -96,41 +121,45 @@
                         <div class="card">
                             <!-- Card header -->
                             <div class="card-header">
-                                <h3 class="mb-0">PartialDigest</h3>
+                                <h3 class="mb-0">Image Loading</h3>
                             </div>
                             <!-- Card body -->
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-lg-8">
                                         <p class="mb-0">
-                                            Restriction mapping application for any DNA sequence.
-                                            <br /><br />
-                                            You should upload a DNA text file and insert any sequences, the calculations
-                                            will be then performed and the output file will be downloaded.
+                                            Please upload an image and insert a message in the input box to have your
+                                            Steganographic image!
                                         </p>
                                     </div>
                                 </div>
                                 <hr />
-                                <form action="/partialdigest.html" method="POST" enctype="multipart/form-data">
+                                <!-- <form action="/unloading" method="POST" enctype="multipart/form-data"> -->
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="customFileLang"
-                                                        lang="en" name="file">
-                                                    <label class="custom-file-label" for="customFileLang"></label>
+                                                <div class="dropzone dropzone-single mb-3" data-toggle="dropzone"
+                                                    data-dropzone-url="http://127.0.0.1:3000/unloading">
+                                                    <div class="fallback">
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input"
+                                                                id="projectCoverUploads" name="image">
+                                                            <label class="custom-file-label"
+                                                                for="projectCoverUploads">Choose file</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dz-preview dz-preview-single">
+                                                        <div class="dz-preview-cover">
+                                                            <img class="dz-preview-img" src="..." alt="..."
+                                                                data-dz-thumbnail>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" data-toggle="tags"
-                                                    value="Insert the sequences" name="text" />
-                                            </div>
-                                        </div>
                                     </div>
-                                    <button class="btn btn-primary" type="submit">Submit sequences</button>
-                                </form>
+                                    <button class="btn btn-primary" type="submit">Steganography!</button>
+                                <!-- </form> -->
                             </div>
                         </div>
                     </div>
