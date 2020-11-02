@@ -1,6 +1,7 @@
 const express = require('express')
 const fs = require('fs')
 const upload = require('express-fileupload')
+const spawn = require("child_process").spawn;
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -18,29 +19,29 @@ app.get('/loading', (req, res) => res.sendFile(__dirname + "/loading.html")) //G
 app.get('/unloading', (req, res) => res.sendFile(__dirname + "/unloading.html")) //Getting HTML from file
 
 app.post('/loading', function (req, res) { //When posting from this route, from the form
-    handleRequest("PartialDigest", req, res);
+    if (typeof (req.files.file) != 'undefined') {
+        req.files.file.name = "image.png"
+        var image = req.files.file.name //Uploaded filename
+        var imagePath = './upload/' + image //Move file to local server path
+        req.files.file.mv(imagePath)
+    }
+    if (typeof (req.files.text) != 'undefined') {
+        req.files.text.name = "text.txt"
+        var text = req.files.text.name //Uploaded filename
+        var textPath = './upload/' + text //Move file to local server path
+        req.files.text.mv(textPath)
+    }
+
+    if (fs.existsSync("./upload/image.png") && fs.existsSync("./upload/text.txt")) {
+        var process = spawn('python', ["./steganoImagePut.py",
+            "./upload/image.png",
+            "./upload/text.txt"]);
+
+        process.stdout.on('data', function (data) {
+            res.send(data.toString());
+        }) 
+    }
+
 })
 
-function handleRequest(type, req, res) {
-    var filename = req.files.file.name //Uploaded filename
-    var path = './files/' + filename //Move file to local server path
-    var search = req.body.text.replace(/ /g, '') //Getting sequence inserted
 
-    req.files.file.mv(path, function (err) { //Moving file to specified local path
-        if (err) {
-            res.send(err)
-        } else {
-            try {
-                readDNA(path, search) //if successfully completed start reading file
-            } catch (e) {
-                console.error(e)
-            }
-            const file = `${__dirname}/filesWrite.txt`;
-            if (type == "BruteForceAlgorithm") {
-                brute.main(n, x, dx, res)
-            } else {
-                partial.main(n, x, dx, res)
-            }
-        }
-    })
-}
