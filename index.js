@@ -35,11 +35,13 @@ app.post('/loading', function (req, res) { //When posting from this route, from 
     if (fs.existsSync("./upload/image.png") && fs.existsSync("./upload/text.txt")) {
         var process = spawn('python', ["./steganoImagePut.py",
             "./upload/image.png",
-            "./upload/text.txt"]);
+            "./upload/text.txt",
+            "./steganoImage.png"]);
 
         process.stdout.on('data', function (data) {
             res.send(data.toString());
-        }) 
+        })
+         
     }
 
 })

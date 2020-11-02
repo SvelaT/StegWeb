@@ -91,7 +91,7 @@ if bitsLength*2 < (maxSize - storeBitsSize*2):
 
     img.save(imageOutFileName)
 
-    print("Finished creating the output image!("+imageOutFileName+")")
+    # print("Finished creating the output image!("+imageOutFileName+")")
 
 else:
     print("Input file is too big for this image!")
